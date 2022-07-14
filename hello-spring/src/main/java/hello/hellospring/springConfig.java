@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import hello.hellospring.aop.TimeTraceAOP;
 import hello.hellospring.repository.JdbcMemberRepository;
 import hello.hellospring.repository.JdbcTemplateMemberRepository;
 import hello.hellospring.repository.JpaMemberRepository;
@@ -28,6 +29,11 @@ public class springConfig {
 	public MemberService memberService() {
 		return new MemberService(memberRepository);
 	}
+	
+//	@Bean 
+//	public TimeTraceAOP timeTraceAOP() {
+//		return new  TimeTraceAOP();
+//	}
 	
 //	@Bean
 //	public MemberRepository memberRepository() {

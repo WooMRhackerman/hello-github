@@ -3,6 +3,8 @@ package hello.hellospring.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,6 +18,7 @@ public class MemberService {
 	
 	private final MemberRepository memberRepository;
 	
+	private static Logger logger = LoggerFactory.getLogger(MemberService.class);
 	
 	public MemberService(MemberRepository memberRepository) {
 		this.memberRepository = memberRepository;
@@ -27,8 +30,8 @@ public class MemberService {
 	public Long join(Member member) {
 		validateMember(member);
 		memberRepository.save(member);
-		
 		return member.getId();
+		
 	}
 	/* 
 	 * 회원목록 조회 

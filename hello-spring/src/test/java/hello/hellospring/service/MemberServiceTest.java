@@ -65,14 +65,14 @@ class MemberServiceTest {
 		
 	}
 
-	@Test
-	void testFindAllMembers() {
-		
-	}
-
-	@Test
-	void testFindOne() {
-		
-	}
+	/*
+	 * @Test void testFindAllMembers() {
+	 * 
+	 * }
+	 * 
+	 * @Test void testFindOne() {
+	 * 
+	 * }
+	 */
 
 }
